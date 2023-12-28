@@ -10,8 +10,16 @@ public class Main {
             - float
             - Double
 
-           Char
+           Char:
 
+           Boolenos:
+            - true
+            - false
         */
+
+
+        // Variables en Java Ejemplos:
+
+        int salario = 10; // crear una variable e inicializar variable
     }
 }
