@@ -15,7 +15,7 @@ public class Main {
         double base = 5;
         double exponent = 3;
         int ressultado = (int) Math.pow(base, exponent);
-        System.out.println("La potencia es: "+ressultado);
+        System.out.println("   La potencia es: "+ressultado);
 
     }
 }
