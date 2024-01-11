@@ -24,8 +24,11 @@ public class Coche {
     }
 
     // Métodos Setters and getters
-    public String dime_largo(){
-        return "El largo del coche es: " + largo;
+    public String dime_datos_generales(){
+        return "La plataforma del vehiculo tiene: " + ruedas +
+                " . Mide "+ largo /  1000 +
+                " metros con un ancho de " + ancho +
+                " cm y un peso de la plataforma de " +peso_plataforma + "kg";
     }
 
     // Setter
@@ -35,5 +38,21 @@ public class Coche {
 
     public String dime_color(){
         return  "El color del coche es: " + color;
+    }
+
+    public void configura_acientos(String acientos_cuero){ // Setter
+        if (acientos_cuero == "si"){
+            this.acientos_cuero = true;
+        }else{
+            this.acientos_cuero = false;
+        }
+    }
+
+    public String dime_asientos(){
+        if (acientos_cuero == true){
+            return  "El coche tiene asientos de cuero";
+        }else{
+            return "El coche tiene asientos de serie";
+        }
     }
 }
