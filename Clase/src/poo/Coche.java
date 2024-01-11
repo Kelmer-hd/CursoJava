@@ -55,4 +55,49 @@ public class Coche {
             return "El coche tiene asientos de serie";
         }
     }
+
+    public  void setClimatizador(String climatizador){
+        if (climatizador == "Si"){
+            this.climatizador = true;
+        }else{
+            this.climatizador = false;
+        }
+    }
+
+    public String dime_climatizador(){
+        if (climatizador == true){
+            return "El coche incorpora climatizador";
+        }else{
+            return "El coche tiene aire a condicionado";
+        }
+    }
+
+
+    // Setter y getter al mismo tiempo es una practica no recomenable
+    public String dime_peso_coche(){
+        int peso_carroseria = 500;
+
+        peso_total = peso_plataforma + peso_carroseria;
+
+        if (acientos_cuero == true){
+            peso_total = peso_total + 50;
+        }
+        if (climatizador == true){
+            peso_total = peso_total + 20;
+        }
+
+        return  "El peso del coche es: " + peso_total;
+    }
+
+    public  int precio_coche(){
+        int precio_final = 1000;
+
+        if (acientos_cuero == true){
+            precio_final += 2000;
+        }if (climatizador == true){
+            precio_final += 1500;
+        }
+
+        return precio_final;
+    }
 }
