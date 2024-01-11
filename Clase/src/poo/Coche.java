@@ -41,7 +41,7 @@ public class Coche {
     }
 
     public void configura_acientos(String acientos_cuero){ // Setter
-        if (acientos_cuero == "si"){
+        if (acientos_cuero.equalsIgnoreCase("Si")){
             this.acientos_cuero = true;
         }else{
             this.acientos_cuero = false;
@@ -56,7 +56,7 @@ public class Coche {
         }
     }
 
-    public  void setClimatizador(String climatizador){
+    public  void configura_Climatizador(String climatizador){
         if (climatizador == "Si"){
             this.climatizador = true;
         }else{
