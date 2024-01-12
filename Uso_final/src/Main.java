@@ -3,14 +3,17 @@ public class Main {
         Empleados trabajador1 = new Empleados("Paco");
         Empleados trabajador2 = new Empleados("Karen");
         Empleados trabajador3 = new Empleados("Antonio");
-        Empleados trabajador4 = new Empleados("Antonio");
+        Empleados trabajador4 = new Empleados("María");
 
         trabajador1.cambiaSeccion("RRHH");
 
-        System.out.println(trabajador1.devuelveDatos());
-        System.out.println(trabajador2.devuelveDatos());
-        System.out.println(trabajador3.devuelveDatos());
-        System.out.println(trabajador4.devuelveDatos());
+        System.out.println(trabajador1.devuelveDatos() +
+                "\n" +trabajador2.devuelveDatos() + "\n"
+                +trabajador3.devuelveDatos() +"\n" +
+                trabajador4.devuelveDatos());
+
+        System.out.println(Empleados.dameIdSiguiente());
+
     }
 }
 
@@ -19,6 +22,10 @@ class Empleados{
     private String seccion;
     private int id;
     private static int Idsiguiente = 1;
+
+    public static String dameIdSiguiente(){
+        return "El id siguiente es: " + Idsiguiente;
+    }
 
     public Empleados(String nom){
         nombre = nom;
