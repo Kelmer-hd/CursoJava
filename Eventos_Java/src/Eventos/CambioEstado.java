@@ -3,6 +3,7 @@ package Eventos;
 import javax.swing.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowStateListener;
+import java.sql.SQLOutput;
 
 public class CambioEstado {
     public static void main(String[] args) {
@@ -29,6 +30,8 @@ class CambiaEstado implements WindowStateListener{
         if (e.getNewState() == 6){
             System.out.println("La ventana esta a pantalla Completa");
 
+        } else if (e.getNewState() == JFrame.NORMAL) {
+            System.out.println("La ventana esta normal");
         }
     }
 }
