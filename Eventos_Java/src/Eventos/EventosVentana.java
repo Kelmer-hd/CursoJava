@@ -1,7 +1,4 @@
 package Eventos;
-
-import com.sun.security.jgss.GSSUtil;
-
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
