@@ -27,8 +27,10 @@ class MarcoVentana extends JFrame{
         setVisible(true);
 
         // Poner nuestra ventena a escucha
-        M_ventana oyenteVentana = new M_ventana();
-        addWindowListener(oyenteVentana);
+        //M_ventana oyenteVentana = new M_ventana();
+        //addWindowListener(oyenteVentana);
+
+        addWindowListener(new M_ventana());
     }
 }
 
