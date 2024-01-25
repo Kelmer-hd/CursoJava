@@ -3,6 +3,7 @@ package Eventos;
 import com.sun.security.jgss.GSSUtil;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -32,22 +33,7 @@ class MarcoVentana extends JFrame{
 }
 
 
-class M_ventana implements WindowListener{
-
-    @Override
-    public void windowOpened(WindowEvent e) {
-        System.out.println("Ventana Abierta");
-    }
-
-    @Override
-    public void windowClosing(WindowEvent e) {
-        System.out.println("Cerrando Ventana");
-    }
-
-    @Override
-    public void windowClosed(WindowEvent e) {
-        System.out.println("La ventana ha sido cerrada");
-    }
+class M_ventana extends WindowAdapter {
 
     @Override
     public void windowIconified(WindowEvent e) {
@@ -55,18 +41,4 @@ class M_ventana implements WindowListener{
         System.out.println("Ventana Minimizada");
     }
 
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-        System.out.println("Ventana Restaurada");
-    }
-
-    @Override
-    public void windowActivated(WindowEvent e) {
-        System.out.println("Ventana Activada");
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent e) {
-        System.out.println("ventana Desacticada");
-    }
 }
