@@ -39,6 +39,14 @@ class PanelAccion extends JPanel{
         add(new JButton(accionAmarillo));
         add(new JButton(accionAzul));
         add(new JButton(accionRojo));
+
+        InputMap mapaEntrada = getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+        KeyStroke teclaAmarillo = KeyStroke.getKeyStroke("ctrl A");
+
+        mapaEntrada.put(teclaAmarillo, "Fondo Amarillo");
+        ActionMap mapaAccion = getActionMap();
+
+        mapaAccion.put("Fondo amarillo", accionAmarillo);
     }
 
     private class AccionColor extends AbstractAction{
@@ -47,6 +55,7 @@ class PanelAccion extends JPanel{
         public void actionPerformed(ActionEvent e) {
             Color c =(Color) getValue("color_de_fondo");
             setBackground(c);
+            System.out.println("NOMBRE: "+getValue(Action.NAME));
         }
 
         public AccionColor(String nombre, Icon icono, Color color_boton){
