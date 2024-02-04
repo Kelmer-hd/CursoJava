@@ -18,7 +18,7 @@ class Marco_Layout extends JFrame{
         Panel_Layout lamina = new Panel_Layout();
 
         // cambia la posicion del layout
-        FlowLayout disposicion = new FlowLayout(FlowLayout.LEFT);
+        FlowLayout disposicion = new FlowLayout(FlowLayout.CENTER, 75, 100);
         // agrega la posicion del layout
         lamina.setLayout(disposicion);
         add(lamina);
